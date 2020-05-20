@@ -25,8 +25,12 @@ public class StudentTest {
 
     @Test
     public void testIfGradesWillBeAdded(){
-        assertSame(90, evey.getGrades().get(0));
+        assertSame(100, evey.getGrades().get(0));
     }
 
-
+    @Test
+    public void isAverageGradeWorking(){
+        assertEquals(100.0, evey.getGradeAverage(), 0);
+        assertEquals(91.66666666666667, severalGrades.getGradeAverage(), 0);
+    }
 }
