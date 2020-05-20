@@ -23,5 +23,17 @@ public class Student {
         this.grades.add(grade);
     }
 
+    public double getGradeAverage(){
+        double result = 0;
+        for(int grade : this.getGrades()){
+            result += grade;
+        }
+        return result / this.getGrades().size();
+    }
+
+    public ArrayList<Integer> getGrades(){
+        return this.grades;
+    }
+
 
 }
